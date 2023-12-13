@@ -31,7 +31,7 @@ post {
              mail to: "srinivasansd26@gmail.com",
              subject: 'Build Successfull',
              body: 'the build is successfull',
-          }                            
+      }                            
 }          
   
 }
