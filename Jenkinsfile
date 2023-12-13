@@ -24,21 +24,26 @@ pipeline {
     
   }
 post{
-  always{
-    sh 'docker rm -f mypycont'
-    sh 'docker run --name mypycont -d -p 3000:5000 my-flask'
-         
-   
-    mailext to: "dhathinamoorthysubramaniamchet@gmail.com",
-    subject: 'build successfull',
-    body: 'the build is successfull',
+  success {
+    emailtext subject:'Build Successfull',
+              body: 'the build is successfull',
+              to: 'dhathinamoorthysubramaniamchet@gmail.com'
+              attachlog: true
+  }
+  failure {
+    emailtext subject: 'Build Failed',
+              body: 'The Build is broken',
+              to: 'dhathinamoorthysubramaniamchet@gmail.com'
+              attachlog: true
+}         
+}  
+} 
         
 
 
 
-      }
-}
-}        
+      
+       
               
   
 
