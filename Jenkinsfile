@@ -24,13 +24,13 @@ pipeline {
     
   }
 
-post {
-       always{
-             sh 'docker rm-f mypycont'
-             sh 'docker run --name mypycont -d -p 3000:5000 my-flask'
-             mail to: "srinivasansd26@gmail.com",
-             subject: 'Build Successfull',
-             body: 'the build is successfull',
+post{
+      always{
+            sh 'docker rm-f mypycont'
+            sh 'docker run --name mypycont -d -p 3000:5000 my-flask'
+            mail to: "srinivasansd26@gmail.com",
+            subject: "notification mail from jenkins",
+            body: "cicd pipeline"
       }                            
 }          
   
