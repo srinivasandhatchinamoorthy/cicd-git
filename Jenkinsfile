@@ -23,9 +23,24 @@ pipeline {
     }
     
   }
+post {
+  success {
+    emailtext subject:'build successfull',
+              body:'the build is successfull',
+              to:'dhatchinamoorthysubramaniamchet@gmail.com'
+              attaching: true
+  }
+  failure {
+     emailtext subject:'build successful',
+              body:'the build is successfull',
+              to:'dhatchinamoorthysubramaniamchet@gmail.com'
+              attaching: true
+  }
+  } 
+  }
+    
 
-
-}          
+          
   
 
             
