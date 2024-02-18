@@ -29,7 +29,7 @@ post {
     sh 'docker run --name mypycont -d -p 3000:5000 my-flask'
   
     mail to:'dhatchinamoorthysubramaniamchet@gmail.com'
-    subject:'build successfull',
+      subject:'build successfull',
       body:'the build is successfull',
             
            
