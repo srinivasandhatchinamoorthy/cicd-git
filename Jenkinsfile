@@ -28,17 +28,18 @@ post {
     sh 'docker rm -f mypycont'
     sh 'docker run --name mypycont -d -p 3000:5000 my-flask'
   
-    emailtext subject:'build successfull',
-              body:'the build is successfull',
-              to:'dhatchinamoorthysubramaniamchet@gmail.com'
+    mail to:'dhatchinamoorthysubramaniamchet@gmail.com'
+    subject:'build successfull',
+      body:'the build is successfull',
+            
            
 
 
 
-    
+      }  
   }
   } 
-  }
+  
   
     
 
